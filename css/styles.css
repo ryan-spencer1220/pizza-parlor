@@ -9,8 +9,27 @@ button {
 
 #confirmation-message {
   display: none;
+  border-radius: 25px;
+  background: #e3f8e2;
+  padding: 20px;
+  box-shadow: 5px 5px #c0bdbd;
+  margin-top: 5%;
+  margin-right: 5%;
+  padding-right: 5%;
+}
+
+#error-message {
+  display: none;
+  border-radius: 25px;
+  background: #ffe3e3;
+  padding: 20px;
+  box-shadow: 5px 5px #c0bdbd;
+  margin-top: 5%;
+  margin-right: 5%;
+  padding-right: 5%;
 }
 
 input[type="text"] {
   width: 300px;
+  margin-bottom: 1%;
 }

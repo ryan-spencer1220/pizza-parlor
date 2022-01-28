@@ -45,15 +45,19 @@ Pizza.prototype.addVeggie = function () {
 $(document).ready(function () {
   $("form#pizza").submit(function (event) {
     event.preventDefault();
-    const inputName = $("input#name").val();
+    const inputFirstName = $("input#first-name").val();
+    const inputLastName = $("input#last-name").val();
     const inputMeatTopping = $("#meat-topping :selected").val();
     const inputVeggieTopping = $("#veggie-topping :selected").val();
     const inputOtherTopping = $("#other-topping :selected").val();
     const inputSize = $("input:radio[name=size]:checked").val();
+    const inputAddress = $("input#address").val();
+    const inputCity = $("input#city").val();
+    const inputZipCode = $("input#zip-code").val();
     const total = 0;
 
     let newPizza = new Pizza(
-      inputName,
+      inputFirstName,
       inputMeatTopping,
       inputVeggieTopping,
       inputOtherTopping,
@@ -67,7 +71,10 @@ $(document).ready(function () {
 
     $("#total-value").text(finalTotal);
     $("#confirmation-message").show();
-    $(".name").text(inputName);
-    console.log(inputName);
+    $(".first-name").text(inputFirstName);
+    $(".last-name").text(inputLastName);
+    $(".address").text(inputAddress);
+    $(".city").text(inputCity);
+    $(".zip-code").text(inputZipCode);
   });
 });

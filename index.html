@@ -1,88 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Pizza Parlor</title>
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Epicodus Pizza Parlor</h1>
-      </div>
-      <form id="pizza">
-        <h5>What size pizza would you like?</h5>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="small" checked />
-            Small ($10)
-          </label>
+    <head>
+        <title>Pizza Parlor</title>
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/jquery-3.6.0.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        <div class="jumbotron">
+            <h1>Epicodus Pizza Parlor</h1>
         </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="medium" />
-            Medium ($15)
-          </label>
+        <form id="pizza">
+            <h5>What size pizza would you like?</h5>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="size" value="small" checked />
+                    Small ($10)
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="size" value="medium" />
+                    Medium ($15)
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="size" value="large" />
+                    Large ($20)
+                </label>
+            </div>
+            <br />
+            <h5>Would you like to add meat to your pizza? (Add $2)</h5>
+                <select class="form-control" id="meat-topping">
+                <option>No Meat</option>
+                <option>Ham</option>
+                <option>Sausage</option>
+                <option>Pepperoni</option>
+                </select>
+            <br />
+            <h5>Would you like to add a vegetable? (Add $1)</h5>
+                <select class="form-control" id="veggie-topping">
+                <option>No Vegetables</option>
+                <option>Mushrooms</option>
+                <option>Onions</option>
+                <option>Peppers</option>
+                </select>
+            <br />
+            <h5>Would you like to add anything else? (Free!)</h5>
+                <select class="form-control" id="other-topping">
+                <option>Just Cheese!</option>
+                <option>Pineapple</option>
+                <option>Olives</option>
+                <option>Garlic</option>
+                </select>
+            <br />
+            <div class="row">
+                <div class="col-6">
+                    <h6>First Name:</h6>
+                    <input id="first-name" class="form-control" type="text" />
+                    <h6>Last Name:</h6>
+                    <input id="last-name" class="form-control" type="text" />
+                    <h6>Address:</h6>
+                    <input id="address" class="form-control" type="text" />
+                    <h6>City:</h6>
+                    <input id="city" class="form-control" type="text" />
+                    <h6>Zip Code:</h6>
+                    <input id="zip-code" class="form-control" type="text" />
+                    <br />
+                    <button type="submit" class="btn btn-primary">Submit!</button>
+                </div>
+            </form>
+        <br />
+            <div class="col-6">
+                <div id="confirmation-message">
+                    <h5>Thank you for your order <span class="first-name"></span>!</h5>
+                    <h5>Your total is $<span id="total-value"></span>.00</h5>
+                    <p>Your pizza will be delivered in 30-45 minutes.</p>
+                    <p>Please verify the following delivery information below:</p>
+
+                    <span class="first-name"></span>
+                    <span class="last-name"></span><br />
+                    <span class="address"></span><br />
+                    <span class="city"></span>
+                    <span class="zip-code"></span>
+                </div>
+                <div id="error-message">
+                    <h5>Please complete the form!</h5>
+                    <p>Please provide all requested information so we know whwere to deliver your</p>
+                </div>
+            </div>
+            </div>
         </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="large" />
-            Large ($20)
-          </label>
-        </div>
-        <br />
-        <h5>Would you like to add meat to your pizza? (Add $2)</h5>
-        <select class="form-control" id="meat-topping">
-          <option>No Meat</option>
-          <option>Ham</option>
-          <option>Sausage</option>
-          <option>Pepperoni</option>
-        </select>
-        <br />
-        <h5>Would you like to add a vegetable? (Add $1)</h5>
-        <select class="form-control" id="veggie-topping">
-          <option>No Vegetables</option>
-          <option>Mushrooms</option>
-          <option>Onions</option>
-          <option>Peppers</option>
-        </select>
-        <br />
-        <h5>Would you like to add anything else? (Free!)</h5>
-        <select class="form-control" id="other-topping">
-          <option>Just Cheese!</option>
-          <option>Pineapple</option>
-          <option>Olives</option>
-          <option>Garlic</option>
-        </select>
-        <br />
-        <label for="name"></label>
-        <h6>Name</h6>
-        <input id="name" class="form-control" type="text" />
-        <label for="name"></label>
-        <h6>Address</h6>
-        <input id="name" class="form-control" type="text" />
-        <label for="name"></label>
-        <h6>City</h6>
-        <input id="name" class="form-control" type="text" />
-        <label for="name"></label>
-        <h6>Zip Code</h6>
-        <input id="name" class="form-control" type="text" />
-        <br />
-        <br />
-        <button type="submit" class="btn btn-primary">Submit!</button>
-      </form>
-      <br />
-      <div class="total"></div>
-      <div id="confirmation-message">
-        <h5>Thank you for your order <span class="name"></span>!</h5>
-        <h5>Your total is $<span id="total-value"></span>.00</h5>
-        <p>
-          Your pizza will be delivered in 30-45 minutes. Please verify the
-          following delivery information below:
-        </p>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
