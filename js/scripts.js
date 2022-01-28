@@ -66,5 +66,8 @@ $(document).ready(function () {
     const finalTotal = newPizza.addVeggie();
 
     $("#total-value").text(finalTotal);
+    $("#confirmation-message").show();
+    $(".name").text(inputName);
+    console.log(inputName);
   });
 });

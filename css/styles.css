@@ -6,3 +6,11 @@
 button {
   box-shadow: 3px 3px #c0bdbd;
 }
+
+#confirmation-message {
+  display: none;
+}
+
+input[type="text"] {
+  width: 300px;
+}
