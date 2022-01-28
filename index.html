@@ -7,5 +7,50 @@
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/scripts.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Epicodus Pizza Parlor</h1>
+      </div>
+      <form id="pizza">
+        <label for="name"></label>
+        <h5>Name</h5>
+        <input id="name" class="form-control" type="text" />
+        <br />
+        <h5>What type of pizza would you like?</h5>
+        <select class="form-control" id="pizza">
+          <option>Pepperoni</option>
+          <option>Ham</option>
+          <option>Sausage</option>
+          <option>Veggie</option>
+        </select>
+        <br />
+        <h5>What size pizza would you like?</h5>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="small" checked />
+            Small ($10)
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="medium" />
+            Medium ($15)
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="large" />
+            Large ($20)
+          </label>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Submit!</button>
+      </form>
+      <br />
+      <div class="total">
+        <h5>Total: <span id="total-value"></span></h5>
+      </div>
+    </div>
+  </body>
 </html>
