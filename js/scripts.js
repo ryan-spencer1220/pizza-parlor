@@ -5,19 +5,20 @@ function Pizza(topping, size) {
   this.size = size;
 }
 
-Pizza.prototype.calculateTotal = function (size) {
-  if (this.size === small) {
-    return "$10.00";
-  } else if (this.size === medium) {
-    return "15.00";
+Pizza.prototype.calculateTotal = function () {
+  if (this.size == "small") {
+    return "$10";
+  } else if (this.size == "medium") {
+    return "$15";
   } else {
-    return "20.00";
+    return "$20";
   }
 };
 
-console.log(Pizza.calculateTotal(small));
+var pizzaOne = new Pizza("pepperoni", "small");
+console.log(pizzaOne);
 
-// UI Logic
+console.log(pizzaOne.calculateTotal("small"));
 
 $(document).ready(function () {
   $("form#pizza").submit(function (event) {
@@ -29,7 +30,6 @@ $(document).ready(function () {
     $("input#new-name").val("");
     $("input#new-pizza").val("");
     $("input#new-size").val("");
-
-    // console.log(calculateTotal(inputSize));
+    calculateTotal(inputSize);
   });
 });
