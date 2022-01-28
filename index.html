@@ -17,12 +17,28 @@
         <h5>Name</h5>
         <input id="name" class="form-control" type="text" />
         <br />
-        <h5>What type of pizza would you like?</h5>
-        <select class="form-control" id="pizza">
-          <option>Pepperoni</option>
+        <h5>Would you like to add meat to your pizza? (Add $2)</h5>
+        <select class="form-control" id="meat-topping">
+          <option>No Meat</option>
           <option>Ham</option>
           <option>Sausage</option>
-          <option>Veggie</option>
+          <option>Pepperoni</option>
+        </select>
+        <br />
+        <h5>Would you like to add a vegetable? (Add $1)</h5>
+        <select class="form-control" id="vegetable-topping">
+          <option>No Vegetables</option>
+          <option>Mushrooms</option>
+          <option>Onions</option>
+          <option>Peppers</option>
+        </select>
+        <br />
+        <h5>Would you like to add anything else? (Free!)</h5>
+        <select class="form-control" id="other-topping">
+          <option>Just Cheese!</option>
+          <option>Pineapple</option>
+          <option>Olives</option>
+          <option>Garlic</option>
         </select>
         <br />
         <h5>What size pizza would you like?</h5>
@@ -49,7 +65,7 @@
       </form>
       <br />
       <div class="total">
-        <h5>Total: <span id="total-value"></span></h5>
+        <h5>Total: $<span id="total-value"></span></h5>
       </div>
     </div>
   </body>

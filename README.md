@@ -29,15 +29,27 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 _Describe: Pizza()_
 
+_Test: "It should return a Pizza object with three properties for toppings and size"_ /
+_Code: const pizzaOne= new Pizza("Pepperoni", "Onions", "Olives", "Medium");_ /
+_Expected Output: Pizza { meatTopping: "Pepperoni", veggieTopping: "Onions", otherTopping: "Olives", size: "Medium" }_
+
+_Describe: calculateTotal()_
+
 _Test: "It should return a Pizza object with two properties for toppings and size"_ /
-_Code: const pizzaOne= new Pizza("Pepperoni", "Medium");_ /
-_Expected Output: Pizza { topping: "Veggie", size: "Medium" }_
-
-_Describe: Calculate()_
-
-_Code: const pizzaOne = new Pizza("pepperoni", "small");_ /
-_Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");_ /
+_Code: const pizzaOne = new Pizza("No Meat", "No vegetables", "Just Cheese", "medium");_ /
 _Expected Output: "$15.00"_
+
+_Describe: addMeat()_
+
+_Test: "It should add $2 to total when a meat is selected from the dropdown menu"_ /
+_Code: const pizzaOne = new Pizza("Pepperoni", "No vegetables", "Just Cheese", "medium");_ /
+_Expected Output: "$17.00"_
+
+_Describe: addVeggie()_
+
+_Test: "It should add $1 to total when a veggie is selected from the dropdown menu"_ /
+_Code: const pizzaOne = new Pizza("No Meat", "Mushrooms", "Just Cheese", "medium");_ /
+_Expected Output: "$16.00"_
 
 ## Known Bugs
 

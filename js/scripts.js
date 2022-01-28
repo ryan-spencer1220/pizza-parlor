@@ -1,35 +1,50 @@
 // Business Logic
 
-function Pizza(name, topping, size) {
+function Pizza(name, meatTopping, vegetableTopping, otherTopping, size) {
   this.name = name;
-  this.topping = topping;
+  this.meatTopping = meatTopping;
+  this.vegetableTopping = vegetableTopping;
+  this.othertopping = otherTopping;
   this.size = size;
+  this.total = 0;
 }
 
 Pizza.prototype.calculateTotal = function () {
   if (this.size === "small") {
-    return 10;
+    this.total += 10;
+    return this.total;
   } else if (this.size === "medium") {
-    return 15;
+    this.total += 15;
+    return this.total;
   } else {
-    return 20;
+    this.total += 20;
+    return this.total;
   }
 };
+
+let pizzaOne = ("Ryan", "Pepperoni", "Onion", "Pinapple", "small", 0);
+
+//UI Logic
 
 $(document).ready(function () {
   $("form#pizza").submit(function (event) {
     event.preventDefault();
     const inputName = $("input#name").val();
-    const inputPizza = $("#pizza :selected").val();
+    const inputMeatTopping = $("#meat-topping :selected").val();
+    const inputVegetableTopping = $("#vegetable-topping :selected").val();
+    const inputOtherTopping = $("#other-topping :selected").val();
     const inputSize = $("input:radio[name=size]:checked").val();
+    const total = 0;
 
-    // $("input#new-name").val("");
-    // $("input#new-pizza").val("");
-    // $("input#new-size").val("");
+    let newPizza = new Pizza(
+      inputName,
+      inputMeatTopping,
+      inputVegetableTopping,
+      inputOtherTopping,
+      inputSize,
+      total
+    );
 
-    let newPizza = new Pizza(inputName, inputPizza, inputSize);
-    let total = newPizza.calculateTotal();
-
-    $("#total-value").text(total);
+    $("#total-value").text(newPizza.calculateTotal());
   });
 });
