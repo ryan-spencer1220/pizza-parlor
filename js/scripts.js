@@ -69,8 +69,21 @@ $(document).ready(function () {
     newPizza.addMeat();
     const finalTotal = newPizza.addVeggie();
 
+    if (
+      inputFirstName === "" ||
+      inputLastName === "" ||
+      inputAddress === "" ||
+      inputAddress === "" ||
+      inputCity === "" ||
+      inputZipCode === ""
+    ) {
+      $("#error-message").show();
+      $("#confirmation-message").hide();
+    } else {
+      $("#error-message").hide();
+      $("#confirmation-message").show();
+    }
     $("#total-value").text(finalTotal);
-    $("#confirmation-message").show();
     $(".first-name").text(inputFirstName);
     $(".last-name").text(inputLastName);
     $(".address").text(inputAddress);
