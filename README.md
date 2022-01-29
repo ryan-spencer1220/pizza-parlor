@@ -20,7 +20,7 @@ _Web application allowing users to input name, pizza size, and desired toppings.
 - _Navigate to the top level of the directory_
 - _Open index.html in your browser_
 - _OR_
-- _Navigate to GH Pages_
+- _Navigate to https://ryan-spencer1220.github.io/pizza-parlor/_
 
 ## Tests
 
