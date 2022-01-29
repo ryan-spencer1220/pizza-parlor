@@ -12,15 +12,15 @@
 
 ## Description
 
-_Web application allowing users to input name, pizza size, and desired toppings. Final total is returned based on size and toppings selected. This exercise was designed to gain additional exposure to constructors and prototypes._
+_Web application allowing users to input delivery information, pizza size, and desired toppings. Final total is returned based on size and toppings selected. This exercise was designed to gain additional exposure to constructors and prototypes._
 
 ## Setup/Installation Requirements
 
 - _Clone this repository to your desktop._
 - _Navigate to the top level of the directory_
 - _Open index.html in your browser_
-- _OR_
-- _Navigate to GH Pages_
+  _OR_
+- _Navigate to https://ryan-spencer1220.github.io/pizza-parlor/_
 
 ## Tests
 
@@ -30,7 +30,7 @@ _Test: "It should return a Pizza object with three properties for toppings and s
 _Code: const pizzaOne= new Pizza("Pepperoni", "Onions", "Olives", "Medium");_ /
 _Expected Output: Pizza { meatTopping: "Pepperoni", veggieTopping: "Onions", otherTopping: "Olives", size: "Medium" }_
 
-_Describe: calculateTotal()_
+_Describe: addSize()_
 
 _Test: "It should return a Pizza object with two properties for toppings and size"_ /
 _Code: const pizzaOne = new Pizza("No Meat", "No vegetables", "Just Cheese", "medium");_ /
