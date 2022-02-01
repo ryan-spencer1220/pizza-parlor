@@ -68,8 +68,8 @@ _Expected Output: "$15.00"_
 
 _Describe: addVeggie()_
 
-_Test: "It should add $1 to total when a veggie is selected from the dropdown menu"_ /
-_Code: const pizzaOne = new Pizza("No Meat", "Mushrooms", "Just Cheese", "medium");_ /
+_Test: "It should add $1 to total when a veggie is selected from the dropdown menu"_ \
+_Code: const pizzaOne = new Pizza("No Meat", "Mushrooms", "Just Cheese", "medium");_ \
 _Expected Output: "$16.00"_
 
 ## Known Bugs
